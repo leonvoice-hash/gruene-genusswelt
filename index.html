@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="de">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grüne Genusswelt</title>
+    <meta name="description"
+        content="Genieße köstliche pflanzliche Gerichte für eine gesunde Ernährung und einen nachhaltigen Lebensstil.">
+    <meta name="author" content="KT">
+    <link rel="icon" type="image/x-icon" href="images/gg-logo.png">
+    <meta name="robots" content="index, follow">
+    <!-- ein weiterer Ordner "assets" wurde im Hauptordner "Grüne Genußwelt" angelegt, dann wurde per <link> ein weitere stylesheet angelegt, wo die Anbindung zum Ordner "assets" gegeben wurde. Es ist auch möglich über der Website Bootstrap/icons diesen Ordner runterzuladen. Hier dann entsprechend die Icons auswählen, den Rest löschen -->
+    <link rel="stylesheet" href="assets/bootstrap-icons-1.13.1/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <!-- Reihenfolge ist wichtig>fonts.css, variables.css, style.css...>es geht um einen logischen Aufbau, siehe claude. erst @fonts, dann variables wie primary color etc, style.css = Buttons, Layout, Schriften etc., sections.css (spezifisch) kann bei Bedarf den Style.css bestimmte Funktionen überschreiben-->
+</head>
+ 
+<body>
+    <header>
+        <!-- unter "class" sind mehrere vordefiniert Schreibweise: nav.felx.align-center.px-2 dann Enter drücken, px-2: p=padding, x=rechts/links -achse, 2= Stufe (Ebene)  -->
+        <nav class="flex align-center px-2">
+            <img src="images/gg-logo.png" alt="">
+            <ul class="flex">
+                <li><a href="#rezepte">Rezepte</a></li>
+                <li><a href="#about">Über Uns</a></li>
+                <li><a href="#newsletter">Newsletter</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+            <div class="flex icons">
+                <a href="#"><i class="bi bi-heart"></i></a>
+                <button><i class="bi bi-search"></i></button>
+            </div>
+            <button aria-label="menü" onclick="openNav()" class="hamburger"><i class="bi bi-list"></i></button>
+        </nav>
+        <!-- Overlay -->
+        <div id="myNav" class="overlay display-none px-2 py-2">
+            <button class="closebtn" onclick="closeNav()">
+                <i class="bi bi-x-lg"></i>
+            </button>
+            <div class="overlay-content flex">
+                <ul class="flex">
+                    <li><a href="#rezepte">Rezepte</a></li>
+                    <li><a href="#about">Über Uns</a></li>
+                    <li><a href="#newsletter">Newsletter</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero flex align-center">
+            <div class="cta flex px-3 py-3">
+                <div>
+                    <div>
+                        <h1>Grüne Genusswelt</h1>
+                        <p class="subheading">Entdecke die Vielfalt der nachhaltigen Küche</p>
+                    </div>
+                    <p>Genieße köstliche pflanzliche Gerichte für eine gesunde Ernährung und einen nachhaltigen
+                        Lebensstil.</p>
+                </div>
+                <div class="buttons-container flex">
+                    <a href="" class="btn btn-primary">Rezepte Stöbern</a>
+                    <a href="" class="btn btn-secondary">Mehr Erfahren</a>
+                </div>
+            </div>
+        </section>
+ 
+        <!-- Neue Rezepte -->
+        <section class="neue-rezepte flex align-center py-4">
+            <h2>Neue Rezepte</h2>
+            <div class="card-container grid">
+                
+                <!-- Rezept-1 -->
+                <div class="card">
+                    <div>
+                        <img src="images/rezept-1.jpg" alt="">
+                        <h3>Quinoa-Power-Bowl mit geröstetem Gemüse</h3>
+                    </div>
+                    <a href="" class="btn btn-primary">Zum Rezept <i class="bi bi-arrow-right"></i></a>
+                </div>
+                
+                <!-- Rezept-2 -->
+                <div class="card">
+                    <div>
+                        <img src="images/rezept-2.jpg" alt="">
+                        <h3>Bunte Gemüsepfanne mit aromatischem Knoblauch-Dressing</h3>
+                    </div>
+                    <a href="" class="btn btn-primary">Zum Rezept <i class="bi bi-arrow-right"></i></a>
+                </div>
+                
+                <!-- Rezept-3 -->
+                <div class="card">
+                    <div>
+                        <img src="images/rezept-3.jpg" alt="">
+                        <h3>Vegane Lasagne mit cremiger Cashew-Bechamel</h3>
+                    </div>
+                    <a href="" class="btn btn-primary">Zum Rezept <i class="bi bi-arrow-right"></i></a>
+                </div>
+                
+                <!-- Rezept-4 -->
+                <div class="card">
+                    <div>
+                        <img src="images/rezept-4.jpg" alt="">
+                        <h3>Asiatische Bowl mit Teriyaki-Tofu und knackigem Gemüse</h3>
+                    </div>
+                    <a href="" class="btn btn-primary">Zum Rezept <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+ 
+        
+        <!-- About -->
+        <section id="about" class="about flex px-4 py-4 justify-center align-center">
+            <div>
+                <img src="images/gg-profile-pic.jpg" alt="">
+            </div>
+        
+            <div class="about-text flex">
+                <div class="flex">
+                    <h2>Über Uns</h2>
+                    <p class="subheading">Leidenschaftliche Verfechter einer gesunden und nachhaltigen Ernährung
+        
+                    </p>
+                </div>
+                <p>Wir glauben fest daran, dass veganes Essen nicht nur gut für unseren Körper, sondern auch für unseren
+                    Planeten ist. Unsere Mission ist es, Menschen zu inspirieren und zu unterstützen, köstliche vegane
+                    Gerichte zu entdecken und in ihren Alltag zu integrieren.
+                </p>
+                <p>Bei Grüne Genußwelt findest du eine vielfältige Auswahl an einfachen und kreativen veganen Rezepten,
+                    die sowohl erfahrene Köche als auch Anfänger ansprechen. Von herzhaften Hauptgerichten über
+                    erfrischende Salate bis hin zu verlockenden Desserts - unsere Rezepte sind voller Geschmack und
+                    Gesundheit.
+                </p>
+                <p>Indem wir tierische Produkte durch köstliche pflanzliche Alternativen ersetzen, tragen wir dazu bei,
+                    den ökologischen Fußabdruck zu verringern und eine nachhaltigere Zukunft für alle zu schaffen.
+                </p>
+            </div>
+        </section>
+ 
+        <!--Newsletter Sektion -->
+        <section id="newsletter" class="newsletter flex px-4 py-4 justify-center text-align-center">
+            <div class="flex">
+                <h2>Abonniere unseren Newsletter</h2>
+                <p class="subheading">Jeden Tag ein neues Rezept in deiner Inbox. Lecker, nachhaltig und vielfältig.
+                </p>
+            </div>
+            <form action="" class="newsletter-form flex">
+                <div class="checkboxes flex justify-center">
+                    <div class="checkbox-1 flex">
+                        <input type="checkbox" name="weekly" id="weekly">
+                        <label for="weekly">Wöchentliche News</label>
+                    </div>
+                    <div class="checkbox-2 flex">
+                        <input type="checkbox" name="daily" id="daily">
+                        <label for="daily">Tägliche Rezepte</label>
+                    </div>
+                </div>
+                <div class="anmelden flex justify-center">
+                    <div class="flex text-align-left">
+                        <label for="email">E-Mail Adresse</label>
+                        <input class="px-1" type="email" id="email" name="email" placeholder="E-mail Adresse">
+                    </div>
+                    <!-- <input class="btn btn-primary" type="submit"> -->
+                    <button class="btn btn-primary" type="submit">Absenden<i class="bi bi-arrow-right ms-2"></i></button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="flex py-4 px-4">
+        <div class="contact flex">
+            <h4>Kontakt</h4>
+            <address>
+                Frankfurter Tor 93 <br>
+                10243 Berlin
+            </address>
+ 
+            <ul>
+                <li> <a href="tel:0191234567">0191 23 45 67</a></li>
+                <li><a href="mailto:info@genuss.com">info@genuss.com</a></li>
+            </ul>
+ 
+        </div>
+        <div class="rechtliches flex">
+            <h4>Rechtliches</h4>
+ 
+            <ul>
+                <li> <a href="#">Impressum</a></li>
+                <li><a href="#">Datenschutz</a></li>
+            </ul>
+ 
+        </div>
+        <div class="social-icons flex">
+            <a aria-label="instagram" href="#"><i class="bi bi-instagram"></i></a>
+            <a aria-label="facebook" href="#"><i class="bi bi-facebook"></i></a>
+            <a aria-label="pinterest" href="#"><i class="bi bi-pinterest"></i></a>
+        </div>
+    </footer>
+    <script>
+        function openNav() {
+            document.getElementById("myNav").classList.add("display-block");
+            document.querySelector("body").style.overflow = "hidden";
+        }
+        function closeNav() {
+            document.getElementById("myNav").classList.remove("display-block")
+            document.querySelector("body").style.overflow = "visible";
+        }
+
+    </script>
+</body>
+ 
+</html>
+ 

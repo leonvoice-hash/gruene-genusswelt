@@ -1,0 +1,178 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    /*125% = 20px = 1rem  */
+    /* Prozente können in den User-Präferenzen überschrieben werden */
+    font-size: 125%;
+    font-family: var(--body-text);
+    line-height: 1.5;
+    color: var(--dark);
+}
+
+h1 {
+    font-size: 3.375rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+.subheading {
+    font-family: var(--subheading);
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 1.2;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--display-text);
+    letter-spacing: -2;
+    line-height: 1.2;
+}
+
+/* Abstände */
+/* Horizontal */
+.px-1 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.px-2 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.px-3 {
+    padding-left: 3.2rem;
+    padding-right: 3.2rem;
+}
+
+.px-4 {
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+/* Vertikal */
+.py-1 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.py-2 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.py-3 {
+    padding-top: 3.2rem;
+    padding-bottom: 3.2rem;
+}
+
+.py-4 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+/* Bilder responsiv */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Schriftformatierung */
+.text-align-center {
+    text-align: center;
+}
+
+.text-align-left {
+    text-align: left;
+}
+
+/* Flex */
+.flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+/* grid */
+.grid {
+    display: grid;
+}
+
+/* Links */
+a {
+    color: var(--dark);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn {
+    padding: 0.8rem 1.2rem;
+    border: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    gap: 0.4rem;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+.btn-secondary {
+    background-color: var(--secondary);
+    align-items: ;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+a:hover,
+.btn:hover {
+    filter: brightness(80%);
+    text-decoration: underline;
+}
+
+a:has(i) {
+    line-height: 0;
+}
+
+/* Icons */
+i {
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width:992px) {
+    html {
+        font-size: 100%;
+    }
+}

@@ -1,0 +1,281 @@
+/* Navigation */
+nav {
+    justify-content: space-between;
+    min-height: 10vh;
+}
+
+nav ul {
+    list-style-type: none;
+    gap: 1rem;
+}
+
+/* Hero */
+.hero {
+    min-height: 90vh;
+    background-image: url("../images/gg-hero.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.cta {
+    background-color: var(--base);
+    flex-direction: column;
+    gap: 1.8rem;
+    margin-left: 10%;
+    width: 50%;
+    max-width: 800px;
+}
+
+.buttons-container {
+    gap: 0.8rem;
+}
+
+/* Neue Rezepte */
+.neue-rezepte {
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card-container {
+    width: 75%;
+    grid-template-columns: repeat(auto-fit, minmax(272px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    justify-content: space-between;
+    border: 1px solid var(--light);
+    box-shadow: 8px 8px 24px 0 #E0E0E0;
+    padding: 0.8rem;
+    align-items: start;
+}
+
+/* About Section */
+.about {
+    gap: 4rem;
+    flex-wrap: wrap;
+    background-color: var(--base);
+}
+
+.about-text {
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.about>div {
+    /* flex-grow / flex-shrink / flex-basis */
+    flex: 0 1 496px;
+}
+
+.about-text>div {
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+/* Newsletter */
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+.newsletter {
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.newsletter>div {
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.newsletter-form {
+    flex-direction: column;
+    gap: 1.4rem;
+}
+
+.checkboxes {
+    gap: 1.4rem;
+    flex-wrap: wrap;
+}
+
+.checkbox-1,
+.checkbox-2 {
+    gap: 0.4rem;
+}
+
+.anmelden {
+    align-items: end;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.anmelden>div {
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.anmelden input[type="email"] {
+    width: 24rem;
+    min-height: 3.2rem;
+}
+
+.anmelden input[type="submit"] {
+    min-height: 3.2rem;
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--dark);
+    color: white;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+footer a {
+    color: var(--light);
+}
+
+footer i {
+    font-size: 2rem;
+}
+
+.contact,
+.rechtliches {
+    flex-direction: column;
+    gap: 1rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.social-icons {
+    gap: 2rem;
+}
+
+address {
+    font-style: normal;
+}
+
+/* Hamburger Navigation */
+.hamburger {
+    display: none;
+}
+
+.closebtn i, 
+.hamburger i {
+    font-size: 1.8rem;
+    color: var(--dark);
+}
+
+/* Overlay */
+.overlay {
+    height: 100svh;
+    width: 50%;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.overlay-content {
+    margin-top: 2rem;
+}
+
+.overlay-content ul {
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.display-none {
+    display: none;
+}
+
+.display-block {
+    display: block;
+}
+
+/* Media Queries */
+@media screen and (width<=992px) {
+    .cta {
+        margin: 0 auto;
+        text-align: center;
+        width: 75%;
+    }
+
+    .buttons-container {
+        flex-direction: column;
+        /* align-items = default stretch */
+        align-items: center;
+    }
+
+    .buttons-container a {
+        min-width: 14rem;
+    }
+}
+/* @media screen and (max-width:576px) {}, andere Schreibweise*/
+@media screen and (width<=576px) {
+    nav .icons,
+    nav a {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+/* Hero Section */
+    .hero {
+        align-items: flex-end;
+    }
+
+    .cta {
+        width: 100%;
+        /* mit Transparenz */
+        background-color: #FFF3E399;
+    }
+
+    /* Neue Rezepte */
+    /* es wird duch das Überschreiben das Bild in der Länge kleiner und zentriert */
+    .card-container {
+        width: 90%;
+    }
+
+    .card {
+        text-align: center;
+        align-items: center;
+    }
+
+    /* About */
+    .about {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* Newsletter */
+    .newsletter {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .anmelden input[type="email"] {
+        width: 100%;
+    }
+
+    .anmelden div {
+        width: 100%;
+        /* 100% = damit die ganze Breite abgedeckt wird */
+    }
+
+    @media screen and (width<=345px) {
+        html {
+            font-size: 90%;
+        }
+    }
+}

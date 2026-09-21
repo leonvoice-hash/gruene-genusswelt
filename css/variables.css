@@ -1,0 +1,10 @@
+:root {
+    --display-text: 'Libre Baskerville', 'Times New Roman', serif;
+    --body-text: 'Hind Madurai', 'Arial', sans-serif;
+    --subheading: 'Lora', 'Times New Roman', serif;
+    --primary: #116156;
+    --secondary: #EDAA05;
+    --base: #FFF3E3;
+    --light: #E0E0E0;
+    --dark: #424242;
+}
