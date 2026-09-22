@@ -9,6 +9,17 @@ nav ul {
     gap: 1rem;
 }
 
+#navbar {
+  overflow: hidden;
+  background-color: white;
+  padding: 10px 10px; /* Large padding which will shrink on scroll (using JS) */
+  transition: 0.4s; /* Adds a transition effect when the padding is decreased */
+  position: fixed; /* Sticky/fixed navbar */
+  width: 100%;
+  top: 0; /* At the top */
+  z-index: 99;
+}
+
 /* Hero */
 .hero {
     min-height: 90vh;
@@ -142,6 +153,10 @@ footer a {
 
 footer i {
     font-size: 2rem;
+}
+
+footer h2 {
+    font-size: 1.2rem;
 }
 
 .contact,

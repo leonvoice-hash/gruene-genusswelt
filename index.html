@@ -22,19 +22,19 @@
 <body>
     <header>
         <!-- unter "class" sind mehrere vordefiniert Schreibweise: nav.felx.align-center.px-2 dann Enter drücken, px-2: p=padding, x=rechts/links -achse, 2= Stufe (Ebene)  -->
-        <nav class="flex align-center px-2">
-            <img src="images/gg-logo.png" alt="">
-            <ul class="flex">
+        <nav id="navbar" class="flex align-center px-2">
+            <img id="logo" src="images/gg-logo.png" alt="">
+            <ul id="navbar-right" class="flex">
                 <li><a href="#rezepte">Rezepte</a></li>
                 <li><a href="#about">Über Uns</a></li>
                 <li><a href="#newsletter">Newsletter</a></li>
                 <li><a href="#kontakt">Kontakt</a></li>
             </ul>
             <div class="flex icons">
-                <a href="#"><i class="bi bi-heart"></i></a>
-                <button><i class="bi bi-search"></i></button>
+                <a aria-label="Favoriten" href="#"><i class="bi bi-heart"></i></a>
+                <button aria-label="Suche"><i class="bi bi-search"></i></button>
             </div>
-            <button aria-label="menü" onclick="openNav()" class="hamburger"><i class="bi bi-list"></i></button>
+            <button aria-label="Menü" onclick="openNav()" class="hamburger"><i class="bi bi-list"></i></button>
         </nav>
         <!-- Overlay -->
         <div id="myNav" class="overlay display-none px-2 py-2">
@@ -174,7 +174,7 @@
     <!-- Footer -->
     <footer id="kontakt" class="flex py-4 px-4">
         <div class="contact flex">
-            <h4>Kontakt</h4>
+            <h2>Kontakt</h2>
             <address>
                 Frankfurter Tor 93 <br>
                 10243 Berlin
@@ -187,7 +187,7 @@
  
         </div>
         <div class="rechtliches flex">
-            <h4>Rechtliches</h4>
+            <h2>Rechtliches</h2>
  
             <ul>
                 <li> <a href="#">Impressum</a></li>
